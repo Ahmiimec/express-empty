@@ -1,7 +1,7 @@
 import express from "express";
 import bodyParser from "body-parser";
 import cors from "cors";
-import chatRoutes from '../routes/chat.routes'
+import index from '../routes/index.routes'
 
 export default (app) => {
 
@@ -9,6 +9,6 @@ export default (app) => {
     app.use(bodyParser.urlencoded({extended: true}));
     app.use(cors());
 
-    app.use("/api/chat/", chatRoutes)
+    app.use("/api/", index)
 
 }
